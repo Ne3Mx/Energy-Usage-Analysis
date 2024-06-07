@@ -1,13 +1,16 @@
-This dataset conatains high frequency interval (30 minutes) of power measurements in the retail and industrial sector.
+# Power Measurements Dataset
 
-It has following columns of interest, 
-- AccountID (4301 unique values), the customer’s account i.e. 4301 unique customer accounts
-- Costcentre (15 unique categories), billing allocation according to power source or load. (Categorize what the load or supply is)
-- MeterpointID (10,848 unique values), virtual power meter.
-- MeterpointType (25 unique values), Energy Consumption Categories or Metered Energy Usage, e.g. Grid, Generator, Solar, refrigeration, extractor fan, etc
-- MarketSector (79 unique value), Market sector that the consumer is operating in.
-- Meterpoint_ID, (10,281 unique values), virtual power meter. This column is linked to multiple Meter_IDs.
-- Meter_ID, (10,627 unique values), multiple Meter_IDs can be aggregated to a single Meterpoint_ID.
-- RDATE, the 30 minute interval that the power measurement has been done for eaxmple “2024-01-01 10:00:00” indicates a reading at 1 January 2024, 10am.
-- P1, the real power in kWh (kilowatt hour) consumed or generated for that 30 minute interval
-- Q1, the imaginary power in kVArh (kilo reactive volt-amp hour) consumed or generated for that 30 minute interval
+This dataset contains high frequency interval (30 minutes) power measurements in the retail and industrial sector.
+
+## Columns of Interest
+
+- **AccountID** (4301 unique values): The customer’s account, i.e., 4301 unique customer accounts.
+- **Costcentre** (15 unique categories): Billing allocation according to power source or load. Categorizes what the load or supply is.
+- **MeterpointID** (10,848 unique values): Virtual power meter.
+- **MeterpointType** (25 unique values): Energy Consumption Categories or Metered Energy Usage, e.g., Grid, Generator, Solar, refrigeration, extractor fan, etc.
+- **MarketSector** (79 unique values): Market sector that the consumer is operating in.
+- **Meterpoint_ID** (10,281 unique values): Virtual power meter. This column is linked to multiple Meter_IDs.
+- **Meter_ID** (10,627 unique values): Multiple Meter_IDs can be aggregated to a single Meterpoint_ID.
+- **RDATE**: The 30-minute interval that the power measurement has been done. For example, “2024-01-01 10:00:00” indicates a reading on January 1, 2024, at 10 AM.
+- **P1**: The real power in kWh (kilowatt hour) consumed or generated for that 30-minute interval.
+- **Q1**: The imaginary power in kVArh (kilo reactive volt-amp hour) consumed or generated for that 30-minute interval.
