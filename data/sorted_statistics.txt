@@ -1,0 +1,254 @@
+Sorting by various statistics:
+
+Sorting via the mean:
+Telco Tower_sector P1Norm: 76 Wh/m^2, 28 sampled meters
+Food: Fast Food_sector P1Norm: 34 Wh/m^2, 143 sampled meters
+ATM_sector P1Norm: 17 Wh/m^2, 66 sampled meters
+Supermarket: Large_sector P1Norm: 16 Wh/m^2, 33 sampled meters
+Coffee shop_sector P1Norm: 15 Wh/m^2, 28 sampled meters
+Restaurant and Bar_sector P1Norm: 12 Wh/m^2, 117 sampled meters
+Food Speciality_sector P1Norm: 11 Wh/m^2, 43 sampled meters
+Accessories_sector P1Norm: 9 Wh/m^2, 23 sampled meters
+Jewellery_sector P1Norm: 9 Wh/m^2, 89 sampled meters
+Cell phones and supporting services_sector P1Norm: 8 Wh/m^2, 98 sampled meters
+Pharmacy and personal care_sector P1Norm: 6 Wh/m^2, 40 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 6 Wh/m^2, 49 sampled meters
+Bank_sector P1Norm: 6 Wh/m^2, 91 sampled meters
+Computers & Electronics_sector P1Norm: 6 Wh/m^2, 52 sampled meters
+Luggage & Leather ware_sector P1Norm: 6 Wh/m^2, 19 sampled meters
+Outdoor goods & wear_sector P1Norm: 6 Wh/m^2, 16 sampled meters
+Fashion: Children's Wear_sector P1Norm: 5 Wh/m^2, 31 sampled meters
+Shoes_sector P1Norm: 5 Wh/m^2, 163 sampled meters
+Fashion: Men's Wear_sector P1Norm: 5 Wh/m^2, 72 sampled meters
+Sports wear_sector P1Norm: 5 Wh/m^2, 67 sampled meters
+Tobacco & Vape_sector P1Norm: 5 Wh/m^2, 18 sampled meters
+Financial services_sector P1Norm: 5 Wh/m^2, 39 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 4 Wh/m^2, 293 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 4 Wh/m^2, 41 sampled meters
+Hairdresser_sector P1Norm: 4 Wh/m^2, 44 sampled meters
+Unknown_sector P1Norm: 4 Wh/m^2, 1084 sampled meters
+Toys_sector P1Norm: 4 Wh/m^2, 20 sampled meters
+Fashion: Women's Wear_sector P1Norm: 4 Wh/m^2, 97 sampled meters
+Optometrists_sector P1Norm: 4 Wh/m^2, 38 sampled meters
+Postal & E-commerce services_sector P1Norm: 4 Wh/m^2, 15 sampled meters
+Homeware & Interior_sector P1Norm: 3 Wh/m^2, 43 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 3 Wh/m^2, 29 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 3 Wh/m^2, 17 sampled meters
+General Retail_sector P1Norm: 3 Wh/m^2, 71 sampled meters
+Books & Stationary_sector P1Norm: 2 Wh/m^2, 22 sampled meters
+Entertainment Centres_sector P1Norm: 2 Wh/m^2, 16 sampled meters
+Offices_sector P1Norm: 2 Wh/m^2, 254 sampled meters
+Furniture_sector P1Norm: 2 Wh/m^2, 20 sampled meters
+Medical_sector P1Norm: 1 Wh/m^2, 26 sampled meters
+Vacant Shops_sector P1Norm: 1 Wh/m^2, 232 sampled meters
+
+Sorting via the max:
+Telco Tower_sector P1Norm: 274 Wh/m^2, 28 sampled meters
+Food: Fast Food_sector P1Norm: 117 Wh/m^2, 143 sampled meters
+Coffee shop_sector P1Norm: 57 Wh/m^2, 28 sampled meters
+Supermarket: Large_sector P1Norm: 53 Wh/m^2, 33 sampled meters
+ATM_sector P1Norm: 48 Wh/m^2, 66 sampled meters
+Restaurant and Bar_sector P1Norm: 42 Wh/m^2, 117 sampled meters
+Food Speciality_sector P1Norm: 39 Wh/m^2, 43 sampled meters
+Jewellery_sector P1Norm: 31 Wh/m^2, 89 sampled meters
+Accessories_sector P1Norm: 31 Wh/m^2, 23 sampled meters
+Pharmacy and personal care_sector P1Norm: 26 Wh/m^2, 40 sampled meters
+Cell phones and supporting services_sector P1Norm: 24 Wh/m^2, 98 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 23 Wh/m^2, 49 sampled meters
+Computers & Electronics_sector P1Norm: 22 Wh/m^2, 52 sampled meters
+Luggage & Leather ware_sector P1Norm: 21 Wh/m^2, 19 sampled meters
+Fashion: Children's Wear_sector P1Norm: 21 Wh/m^2, 31 sampled meters
+Shoes_sector P1Norm: 19 Wh/m^2, 163 sampled meters
+Unknown_sector P1Norm: 18 Wh/m^2, 1084 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 18 Wh/m^2, 41 sampled meters
+Sports wear_sector P1Norm: 18 Wh/m^2, 67 sampled meters
+Fashion: Men's Wear_sector P1Norm: 18 Wh/m^2, 72 sampled meters
+Outdoor goods & wear_sector P1Norm: 18 Wh/m^2, 16 sampled meters
+Bank_sector P1Norm: 18 Wh/m^2, 91 sampled meters
+Tobacco & Vape_sector P1Norm: 18 Wh/m^2, 18 sampled meters
+Financial services_sector P1Norm: 17 Wh/m^2, 39 sampled meters
+Hairdresser_sector P1Norm: 17 Wh/m^2, 44 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 16 Wh/m^2, 293 sampled meters
+Fashion: Women's Wear_sector P1Norm: 14 Wh/m^2, 97 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 14 Wh/m^2, 29 sampled meters
+Optometrists_sector P1Norm: 14 Wh/m^2, 38 sampled meters
+General Retail_sector P1Norm: 13 Wh/m^2, 71 sampled meters
+Postal & E-commerce services_sector P1Norm: 13 Wh/m^2, 15 sampled meters
+Homeware & Interior_sector P1Norm: 13 Wh/m^2, 43 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 12 Wh/m^2, 17 sampled meters
+Toys_sector P1Norm: 12 Wh/m^2, 20 sampled meters
+Books & Stationary_sector P1Norm: 9 Wh/m^2, 22 sampled meters
+Entertainment Centres_sector P1Norm: 9 Wh/m^2, 16 sampled meters
+Offices_sector P1Norm: 7 Wh/m^2, 254 sampled meters
+Medical_sector P1Norm: 6 Wh/m^2, 26 sampled meters
+Furniture_sector P1Norm: 6 Wh/m^2, 20 sampled meters
+Vacant Shops_sector P1Norm: 4 Wh/m^2, 232 sampled meters
+
+Sorting via the 25% percentile:
+Telco Tower_sector P1Norm: 32 Wh/m^2, 28 sampled meters
+ATM_sector P1Norm: 12 Wh/m^2, 66 sampled meters
+Food: Fast Food_sector P1Norm: 11 Wh/m^2, 143 sampled meters
+Supermarket: Large_sector P1Norm: 5 Wh/m^2, 33 sampled meters
+Restaurant and Bar_sector P1Norm: 4 Wh/m^2, 117 sampled meters
+Food Speciality_sector P1Norm: 4 Wh/m^2, 43 sampled meters
+Coffee shop_sector P1Norm: 4 Wh/m^2, 28 sampled meters
+Bank_sector P1Norm: 3 Wh/m^2, 91 sampled meters
+Cell phones and supporting services_sector P1Norm: 3 Wh/m^2, 98 sampled meters
+Luggage & Leather ware_sector P1Norm: 2 Wh/m^2, 19 sampled meters
+Pharmacy and personal care_sector P1Norm: 2 Wh/m^2, 40 sampled meters
+Jewellery_sector P1Norm: 2 Wh/m^2, 89 sampled meters
+Accessories_sector P1Norm: 2 Wh/m^2, 23 sampled meters
+Financial services_sector P1Norm: 2 Wh/m^2, 39 sampled meters
+Tobacco & Vape_sector P1Norm: 2 Wh/m^2, 18 sampled meters
+Computers & Electronics_sector P1Norm: 2 Wh/m^2, 52 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 1 Wh/m^2, 49 sampled meters
+Sports wear_sector P1Norm: 1 Wh/m^2, 67 sampled meters
+Outdoor goods & wear_sector P1Norm: 1 Wh/m^2, 16 sampled meters
+Fashion: Men's Wear_sector P1Norm: 1 Wh/m^2, 72 sampled meters
+Optometrists_sector P1Norm: 1 Wh/m^2, 38 sampled meters
+Shoes_sector P1Norm: 1 Wh/m^2, 163 sampled meters
+Fashion: Children's Wear_sector P1Norm: 1 Wh/m^2, 31 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 1 Wh/m^2, 293 sampled meters
+Hairdresser_sector P1Norm: 1 Wh/m^2, 44 sampled meters
+Toys_sector P1Norm: 1 Wh/m^2, 20 sampled meters
+Postal & E-commerce services_sector P1Norm: 1 Wh/m^2, 15 sampled meters
+Homeware & Interior_sector P1Norm: 1 Wh/m^2, 43 sampled meters
+Fashion: Women's Wear_sector P1Norm: 1 Wh/m^2, 97 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 1 Wh/m^2, 29 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 1 Wh/m^2, 41 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 1 Wh/m^2, 17 sampled meters
+Books & Stationary_sector P1Norm: 1 Wh/m^2, 22 sampled meters
+General Retail_sector P1Norm: 1 Wh/m^2, 71 sampled meters
+Entertainment Centres_sector P1Norm: 0 Wh/m^2, 16 sampled meters
+Furniture_sector P1Norm: 0 Wh/m^2, 20 sampled meters
+Offices_sector P1Norm: 0 Wh/m^2, 254 sampled meters
+Medical_sector P1Norm: 0 Wh/m^2, 26 sampled meters
+Unknown_sector P1Norm: 0 Wh/m^2, 1084 sampled meters
+Vacant Shops_sector P1Norm: 0 Wh/m^2, 232 sampled meters
+
+Sorting via the 50% median:
+Telco Tower_sector P1Norm: 59 Wh/m^2, 28 sampled meters
+Food: Fast Food_sector P1Norm: 25 Wh/m^2, 143 sampled meters
+ATM_sector P1Norm: 16 Wh/m^2, 66 sampled meters
+Supermarket: Large_sector P1Norm: 15 Wh/m^2, 33 sampled meters
+Coffee shop_sector P1Norm: 11 Wh/m^2, 28 sampled meters
+Restaurant and Bar_sector P1Norm: 9 Wh/m^2, 117 sampled meters
+Food Speciality_sector P1Norm: 8 Wh/m^2, 43 sampled meters
+Accessories_sector P1Norm: 7 Wh/m^2, 23 sampled meters
+Cell phones and supporting services_sector P1Norm: 7 Wh/m^2, 98 sampled meters
+Jewellery_sector P1Norm: 6 Wh/m^2, 89 sampled meters
+Bank_sector P1Norm: 5 Wh/m^2, 91 sampled meters
+Luggage & Leather ware_sector P1Norm: 5 Wh/m^2, 19 sampled meters
+Computers & Electronics_sector P1Norm: 4 Wh/m^2, 52 sampled meters
+Financial services_sector P1Norm: 4 Wh/m^2, 39 sampled meters
+Pharmacy and personal care_sector P1Norm: 4 Wh/m^2, 40 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 4 Wh/m^2, 49 sampled meters
+Outdoor goods & wear_sector P1Norm: 4 Wh/m^2, 16 sampled meters
+Fashion: Men's Wear_sector P1Norm: 4 Wh/m^2, 72 sampled meters
+Shoes_sector P1Norm: 3 Wh/m^2, 163 sampled meters
+Fashion: Children's Wear_sector P1Norm: 3 Wh/m^2, 31 sampled meters
+Tobacco & Vape_sector P1Norm: 3 Wh/m^2, 18 sampled meters
+Sports wear_sector P1Norm: 3 Wh/m^2, 67 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 3 Wh/m^2, 293 sampled meters
+Optometrists_sector P1Norm: 2 Wh/m^2, 38 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 2 Wh/m^2, 41 sampled meters
+Hairdresser_sector P1Norm: 2 Wh/m^2, 44 sampled meters
+Fashion: Women's Wear_sector P1Norm: 2 Wh/m^2, 97 sampled meters
+Unknown_sector P1Norm: 2 Wh/m^2, 1084 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 2 Wh/m^2, 29 sampled meters
+Postal & E-commerce services_sector P1Norm: 2 Wh/m^2, 15 sampled meters
+Homeware & Interior_sector P1Norm: 2 Wh/m^2, 43 sampled meters
+Books & Stationary_sector P1Norm: 2 Wh/m^2, 22 sampled meters
+Toys_sector P1Norm: 2 Wh/m^2, 20 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 2 Wh/m^2, 17 sampled meters
+General Retail_sector P1Norm: 2 Wh/m^2, 71 sampled meters
+Entertainment Centres_sector P1Norm: 1 Wh/m^2, 16 sampled meters
+Offices_sector P1Norm: 1 Wh/m^2, 254 sampled meters
+Furniture_sector P1Norm: 1 Wh/m^2, 20 sampled meters
+Medical_sector P1Norm: 1 Wh/m^2, 26 sampled meters
+Vacant Shops_sector P1Norm: 1 Wh/m^2, 232 sampled meters
+
+Sorting via the 75% percentile:
+Telco Tower_sector P1Norm: 82 Wh/m^2, 28 sampled meters
+Food: Fast Food_sector P1Norm: 49 Wh/m^2, 143 sampled meters
+Supermarket: Large_sector P1Norm: 24 Wh/m^2, 33 sampled meters
+Coffee shop_sector P1Norm: 23 Wh/m^2, 28 sampled meters
+ATM_sector P1Norm: 22 Wh/m^2, 66 sampled meters
+Restaurant and Bar_sector P1Norm: 16 Wh/m^2, 117 sampled meters
+Food Speciality_sector P1Norm: 15 Wh/m^2, 43 sampled meters
+Accessories_sector P1Norm: 15 Wh/m^2, 23 sampled meters
+Jewellery_sector P1Norm: 13 Wh/m^2, 89 sampled meters
+Cell phones and supporting services_sector P1Norm: 11 Wh/m^2, 98 sampled meters
+Pharmacy and personal care_sector P1Norm: 11 Wh/m^2, 40 sampled meters
+Computers & Electronics_sector P1Norm: 10 Wh/m^2, 52 sampled meters
+Luggage & Leather ware_sector P1Norm: 10 Wh/m^2, 19 sampled meters
+Fashion: Children's Wear_sector P1Norm: 9 Wh/m^2, 31 sampled meters
+Outdoor goods & wear_sector P1Norm: 9 Wh/m^2, 16 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 9 Wh/m^2, 49 sampled meters
+Shoes_sector P1Norm: 8 Wh/m^2, 163 sampled meters
+Bank_sector P1Norm: 8 Wh/m^2, 91 sampled meters
+Fashion: Men's Wear_sector P1Norm: 8 Wh/m^2, 72 sampled meters
+Sports wear_sector P1Norm: 8 Wh/m^2, 67 sampled meters
+Toys_sector P1Norm: 7 Wh/m^2, 20 sampled meters
+Financial services_sector P1Norm: 7 Wh/m^2, 39 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 7 Wh/m^2, 293 sampled meters
+Tobacco & Vape_sector P1Norm: 7 Wh/m^2, 18 sampled meters
+Unknown_sector P1Norm: 6 Wh/m^2, 1084 sampled meters
+Hairdresser_sector P1Norm: 6 Wh/m^2, 44 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 6 Wh/m^2, 41 sampled meters
+Fashion: Women's Wear_sector P1Norm: 6 Wh/m^2, 97 sampled meters
+Homeware & Interior_sector P1Norm: 5 Wh/m^2, 43 sampled meters
+Postal & E-commerce services_sector P1Norm: 5 Wh/m^2, 15 sampled meters
+Optometrists_sector P1Norm: 5 Wh/m^2, 38 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 5 Wh/m^2, 17 sampled meters
+General Retail_sector P1Norm: 4 Wh/m^2, 71 sampled meters
+Books & Stationary_sector P1Norm: 4 Wh/m^2, 22 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 4 Wh/m^2, 29 sampled meters
+Offices_sector P1Norm: 3 Wh/m^2, 254 sampled meters
+Entertainment Centres_sector P1Norm: 2 Wh/m^2, 16 sampled meters
+Furniture_sector P1Norm: 2 Wh/m^2, 20 sampled meters
+Vacant Shops_sector P1Norm: 2 Wh/m^2, 232 sampled meters
+Medical_sector P1Norm: 2 Wh/m^2, 26 sampled meters
+
+Sorting via the Count:
+Unknown_sector P1Norm: 13,758,995, 1084 sampled meters
+Fashion: Unisex Wear_sector P1Norm: 7,938,828, 293 sampled meters
+Shoes_sector P1Norm: 4,295,863, 163 sampled meters
+Offices_sector P1Norm: 4,275,457, 254 sampled meters
+Food: Fast Food_sector P1Norm: 4,149,861, 143 sampled meters
+Restaurant and Bar_sector P1Norm: 3,414,859, 117 sampled meters
+Fashion: Women's Wear_sector P1Norm: 2,638,531, 97 sampled meters
+Bank_sector P1Norm: 2,534,918, 91 sampled meters
+Jewellery_sector P1Norm: 2,425,392, 89 sampled meters
+Cell phones and supporting services_sector P1Norm: 2,379,065, 98 sampled meters
+Sports wear_sector P1Norm: 1,960,474, 67 sampled meters
+Fashion: Men's Wear_sector P1Norm: 1,805,883, 72 sampled meters
+Vacant Shops_sector P1Norm: 1,559,400, 232 sampled meters
+ATM_sector P1Norm: 1,551,663, 66 sampled meters
+Pharmacy and personal care_sector P1Norm: 1,279,408, 40 sampled meters
+General Retail_sector P1Norm: 1,257,261, 71 sampled meters
+Cosmetics and Perfumery_sector P1Norm: 1,235,455, 49 sampled meters
+Supermarket: Large_sector P1Norm: 1,204,252, 33 sampled meters
+Homeware & Interior_sector P1Norm: 1,168,812, 43 sampled meters
+Computers & Electronics_sector P1Norm: 1,104,691, 52 sampled meters
+Beauty Salon/Spa/Nail Bar_sector P1Norm: 1,093,690, 41 sampled meters
+Financial services_sector P1Norm: 994,492, 39 sampled meters
+Hairdresser_sector P1Norm: 965,648, 44 sampled meters
+Optometrists_sector P1Norm: 935,366, 38 sampled meters
+Food Speciality_sector P1Norm: 849,847, 43 sampled meters
+Coffee shop_sector P1Norm: 845,310, 28 sampled meters
+Fashion: Children's Wear_sector P1Norm: 791,892, 31 sampled meters
+Medical_sector P1Norm: 726,438, 26 sampled meters
+Toys_sector P1Norm: 635,231, 20 sampled meters
+Accessories_sector P1Norm: 621,949, 23 sampled meters
+Books & Stationary_sector P1Norm: 568,159, 22 sampled meters
+Telco Tower_sector P1Norm: 517,991, 28 sampled meters
+Home Furnishing, Art, Antiques,Décor_sector P1Norm: 475,444, 17 sampled meters
+Entertainment Centres_sector P1Norm: 460,438, 16 sampled meters
+Luggage & Leather ware_sector P1Norm: 453,068, 19 sampled meters
+Furniture_sector P1Norm: 415,727, 20 sampled meters
+Outdoor goods & wear_sector P1Norm: 411,542, 16 sampled meters
+Postal & E-commerce services_sector P1Norm: 393,513, 15 sampled meters
+Tobacco & Vape_sector P1Norm: 383,178, 18 sampled meters
+Shopping Mall/Retail centre_sector P1Norm: 372,477, 29 sampled meters
+
