@@ -23,9 +23,9 @@ Files in this project
 </pre>
 
 ## `Energy_data_exploration.ipynb`
-Basic exploratory and data analysis performed on a smaller subset of the dataset. Basic information from the dataset is displayed, such as a sample, columns and data types of columns, as well as basic calculations.
+Basic exploratory and data analysis performed on a smaller subset of the dataset. Basic information from the dataset is displayed, such as a sample, columns and data types of columns and basic calculations.
 
-### Analyses and Exploration Done
+### Analyses and Exploration
 - Extraction of unique values from identifier columns `Costcentre` and `MarketSector`
 - Counting unique `AccountID` coupled with each market sector
 - Extracting and displaying unique `MeterPoint` attributes
