@@ -191,7 +191,6 @@ def compute_histogram(df_filtered, summary_stats_dict, loop_count, meter_df, met
         ax2.set_ylabel('Density')
 
         try:
-        #if meter_count > 3:
             # Fit a skewed normal distribution to the median data
             shape, loc, scale = skewnorm.fit(filtered_data['median'])
 
@@ -303,7 +302,7 @@ def compute_baseline_profile_data(df_filtered, meter_df, meter_stats, summary_st
 
         # Remove entries where P1 == 0 and Getnorm == 0
         df_filtered = df_filtered[(df_filtered['P1'] != 0) & (df_filtered['Getnorm'] != 0)]
-        #df_filtered = df_filtered[ (df_filtered['Getnorm'] != 0)]
+        #df_filtered = df_filtered[ (df_filtered['Getnorm'] != 0)] #Using P1 != 0 may cause gaps as used above
 
         # Calculate the number of entries removed
         entries_removed = initial_count - df_filtered.shape[0]
@@ -418,9 +417,10 @@ def compute_benchmark_plot(df_filtered, meter_df, meter_stats, baseline_profile,
     # Fill between mean - std and mean + std with label showing std value from baseline_stats
     plt.fill_between(baseline_profile.index, baseline_profile['mean'] - baseline_profile['std'], baseline_profile['mean'] + baseline_profile['std'], alpha=0.2, color='red', label=f'Std Dev: {baseline_stats["std"]:,.3f}')
     
+    if DISPLAY_RAW_DATA:
     # Find the index of the highest value in df_filtered['P1'] and retrieve the corresponding SNUMBER
-    # highest_user_index = df_filtered['P1Norm'].idxmax()
-    # highest_snumber = df_filtered.loc[highest_user_index, 'SNUMBER']
+        highest_user_index = df_filtered['P1Norm'].idxmax()
+        highest_snumber = df_filtered.loc[highest_user_index, 'SNUMBER']
     
     if DISPLAY_RAW_DATA:
         # Print information about the highest user
@@ -428,6 +428,7 @@ def compute_benchmark_plot(df_filtered, meter_df, meter_stats, baseline_profile,
 
     if PLOT_COMPARISON_METER:
         try:
+            #Get a slice of data from the comparison meter.
             meter_stats,meter_df = slice_comparison_meter(meter_df)
 
             # Plot test Comparison data if specified
@@ -468,7 +469,7 @@ def compute_benchmark_plot(df_filtered, meter_df, meter_stats, baseline_profile,
     step_hour = 12
     x_ticks = np.arange(0, len(labels_hour), step_hour)
 
-    # Function to determine label based on index
+    # Function to determine label based on index, this will either print Day and time at 00:00 or just time for other values
     def get_label(i):
         if not (i % 4):
             return labels_day[i * step_hour]
@@ -655,7 +656,7 @@ def compute_dataframe_segment(sector, df_filtered_col):
               f"displaying a total of {end_date - start_date} days of data")
     
     #------------------------
-    #Ideal method to remove P1 values where the whole set is 0 but causes issues with DASK
+    #Ideal method to remove P1 values where the whole set is 0 for that meter but causes issues with DASK
 
     # Remove all SNUMBERS where the whole P1 set = 0
     # Group by SNUMBER and calculate the sum of P1 for each group
@@ -680,7 +681,7 @@ def compute_dataframe_segment(sector, df_filtered_col):
 
     return df_filtered
 
-#Returns the second largest number in a dataset
+#Returns the second largest number in a dataset, used for alpha calculation as largest number is too large, 2nd largest works better.
 def second_largest(counts):
     unique_counts = list(set(counts))  # Remove duplicates
     if len(unique_counts) < 2:
@@ -730,10 +731,9 @@ def calculate_sector_specific_stats(summary_stats_dict,sorted_sector_counts):
         def write_sorted_values(file, title, sorted_values):
             file.write(f"Sorting via the {title}:\n")
             for key, value in sorted_values:
-                #file.write(f"{key} P1: {value:,.3f}kWh\n")
                 sector = key.split('_')[0]  # Extract the sector name
                 count = sector_counts_dict.get(sector, 0)  # Get the count of sampled meters
-                if not (title == 'Count'):
+                if not (title == 'Count'): #Count do not need Wh/m2 appended to the end.
                     file.write(f"{key} P1Norm: {value:,.0f} Wh/m^2, {count} sampled meters\n")
                 else:
                     file.write(f"{key} P1Norm: {value:,.0f}, {count} sampled meters\n")
@@ -766,7 +766,7 @@ def calculate_sector_specific_stats(summary_stats_dict,sorted_sector_counts):
         print_sorted_values("75% percentile", sorted_percentile_75)
         print_sorted_values("Count", sorted_count)
 
-    # Plotting
+    # Plotting all different sectors sorted by their energy density footprint.
     def plot_sorted_values(title, sorted_values, sector_counts_dict):
         # Filter out NaN values
         filtered_values = [(sector, value) for sector, value in sorted_values if not np.isnan(value)]
@@ -778,27 +778,29 @@ def calculate_sector_specific_stats(summary_stats_dict,sorted_sector_counts):
             print("No valid data to plot.")
             return
         
+        #Alpha closer to 1 signify more data available, lower alpha = less data fot that sector.
         min_count = min(counts)
-        max_count = second_largest(counts)#max(counts)
+        max_count = second_largest(counts)#max(counts) #Too large, using 2nd largest instead.
         alphas = [min((count - min_count) / (max_count - min_count) * 0.7 + 0.3, 1) for count in counts]#Ensure Alphas don't exceed 1
 
-
+        # Initiate plot and size
         fig, ax = plt.subplots(figsize=(20, 6))
         bars = ax.bar(sectors, values, alpha=0.7)
         
+        # Plot each sector in the bar graph
         for bar, alpha, count in zip(bars, alphas, counts):
             bar.set_alpha(alpha)
             height = bar.get_height()
-            #ax.text(bar.get_x() + bar.get_width() / 2, height / 2, f'samples = {count}', ha='center', va='baseline', rotation='vertical', fontsize=8, color='black')
             ax.text(bar.get_x() + bar.get_width() / 2, max_count*0.02, f'samples = {count}\nenergy density = {height:.3f} ', ha='center', va='baseline', rotation='vertical', fontsize=6, color='black')
 
-
+        #Set title, labels, grid, etc
         ax.set_title(f'Sorting via the {title}')
         ax.set_xlabel('Sectors')
         ax.set_ylabel('P1Norm (Wh/m^2)')
         plt.grid(True)
         plt.xticks(rotation=90)
         plt.tight_layout()
+
         # Save and display plot
         filename = clean_filename(f"sv-{title}")
         filepath = f'data/{filename}.png'
@@ -827,7 +829,7 @@ def slice_comparison_meter(meter_df):
     meter_df.reset_index(drop=True, inplace=True)
 
     # Convert UnixTimestamp to datetime if it's not already
-    #meter_df['UnixTimestamp'] = pd.to_datetime(meter_df['UnixTimestamp'])#Createss a warning message
+    #meter_df['UnixTimestamp'] = pd.to_datetime(meter_df['UnixTimestamp'])#Createss a warning message, Dask do not like this
     meter_df.loc[:, 'UnixTimestamp'] = pd.to_datetime(meter_df['UnixTimestamp'])
 
     # Find the first Monday at 00:00:00 in meter_df
@@ -872,7 +874,7 @@ def get_comparison_meter(df_filtered):
             # Filter df_filtered to include only data for the selected Comparison (SNUMBER)
             meter_df = df_filtered[df_filtered['SNUMBER'] == RANDOM_PERFORMANCE_COMPARISON].copy()
             
-            # Check if the sum of 'P1' is larger than one
+            # Check if the sum of 'P1' is larger than one, avoid getting a meter with very low consumption
             if meter_df['P1'].sum() > 1:
                 # Ensure 'Getnorm' column has no zero values to avoid division by zero errors,
                 # multiply with 1000 to shift from kWh to Wh
@@ -890,7 +892,7 @@ def get_comparison_meter(df_filtered):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-        # Create meter_df with the same shape but filled with zeros
+        # Create meter_df with the same shape but filled with zeros in case we could not get a relevant comparison meter
         meter_df = pd.DataFrame(columns=df_filtered.columns)
 
         # Create a dummy row with zero values
@@ -902,6 +904,7 @@ def get_comparison_meter(df_filtered):
         # Add new column
         meter_df['P1Norm'] = 0
 
+    # Grabs a slice of data for the comparison meter
     meter_stats, meter_df = slice_comparison_meter(meter_df)
     
     return meter_df, meter_stats
@@ -955,9 +958,6 @@ def main():
         # #Display a plot of the benchmarkprofile for that sector
         compute_benchmark_plot(df_filtered,meter_df,meter_stats,baseline_profile,stack_height,baseline_stats,meter_count,sector)
 
-        #Display a normalised dsitribution of the benchmarkprofile for that sector
-        # compute_normal_distribution(baseline_stats,meter_stats,stack_height,meter_count,sector)
-    
     #Calculate the specific statistical information for the specific sector
     calculate_sector_specific_stats(summary_stats_dict,sorted_sector_counts)
 
@@ -967,11 +967,12 @@ sorted_sector_counts = pd.DataFrame(columns=['MarketSector', 'Count'])
 DISPLAY_RAW_DATA = 0 #For debugging, shows more info around dataframes
 MARKET_SECTOR_SAMPLE_SIZE = 100 #How many market sectors would you like to process? Currently there are 79, chooing a larger number selects everything
 
+# Specify if you would like to start at a specific sector and end at another, ideal for job scheduling
 SECTOR_START = 0 #0 is first sector
 SECTOR_END = 40#Last sector to do
 
-PLOT_COMPARISON_METER =1#A randomly selected power meter from that specfic sector is chosed and then plotted over the analysed data to make a comparison
-REMOVE_EXTREME_OUTLIERS = 1#Extreme values were not removed from the dataset, if you encounter extremes, set to 1 to get rid of extremes
+PLOT_COMPARISON_METER =1#A randomly selected power meter from that specfic sector is chosen and then plotted over the analysed data to make a comparison
+REMOVE_EXTREME_OUTLIERS = 1#Apply IQR and remove those datapoints
 
 #Specifiy the the start and end time date offset of the data that you want to include in the analysis, choose 120 months(10 years) for the whole dataset
 START_DAY = 0
@@ -985,10 +986,11 @@ END_MONTH=120
 #Choose the type of meter you want to analyses
 METERPOINTTYPE_ID = 3 #Primary Supply/Grid Supply
 
+# Needed to run on windows in non-interactive mode
 if __name__ == '__main__':
     
     #-------------------------------------
-    #Uncomment for HPC use
+    #Uncomment for HPC use in a non-interactive environment.
 
     #set interactive mode off
     plt.ioff()
@@ -1049,8 +1051,6 @@ if __name__ == '__main__':
     # Print the number of partitions in the Dask DataFrame
     print(f'Number of partitions: {df.npartitions}')
 
-    METERPOINTTYPE_ID = 3  # Define the MeterPointType_id to filter for Primary Supply/Grid Supply
-
     print("\nMarket sectors sorted by descending AccountID\n")
 
     # Filter the dataframe to only select rows where MeterPointType_id equals the specified ID
@@ -1083,5 +1083,5 @@ if __name__ == '__main__':
     for sector, meter_count in sorted_meter_counts.items():
         print(f"Market Sector: {sector} - Unique Meter Count: {meter_count}")
 
-    #In order to keep variables out of scope
+    #In order to keep variables out of scope for the jupyter notebook, a main loop was used.
     main()
