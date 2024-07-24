@@ -13,6 +13,7 @@ Files in this project
 |->Energy_data_processing.ipynb [A Jupyter notebook file that reads and computes the dataset with dask dataframes. Statistical data and images is generated and exported]
 |->power_consumption_data.7z [A small sample of the dataset, full dataset does not fit in github]
 |->Siku_script.sh [The script used to execute the python code contained in Energy_data_processing.ipynb]
+|->hpc_meter_proc.py [Python code for execution on HPC]
 |->.gitattributes [Required for Gitgub Large File System used by Energy_data_processing.ipynb]
 |->ISP Presentation.pdf [Presentation slides]
 |->ISP report.pdf[Project report]
