@@ -53,13 +53,13 @@ This Jupyter notebook is dedicated to the data processing of CSV files containin
 
 ### Sample Images
 
-![Histogram with skewed normal distribution and comparison](images/hg-Fashion_ Unisex Wear-tm.svg "Histogram with skewed normal distribution and comparison")
+![Histogram with skewed normal distribution and comparison](images/hg-Fashion_%20Unisex%20Wear-tm.svg "Histogram with skewed normal distribution and comparison")
 *Histogram with skewed normal distribution and comparison*
 
-![Mean and standard deviation time-series benchmark plot and comparison](images/pt-mn-Fashion_ Unisex Wear-tm.svg "Mean with standard deviation time-series benchmark plot and comparison")
+![Mean and standard deviation time-series benchmark plot and comparison](images/pt-mn-Fashion_%20Unisex%20Wear-tm.svg "Mean with standard deviation time-series benchmark plot and comparison")
 *Mean with standard deviation time-series benchmark plot and comparison*
 
-![Median and significant percentile range of time-series benchmark plot and comparison](images/pt-md-Fashion_ Unisex Wear-tm.svg "Median and significant percentile range of time-series benchmark plot and comparison")
+![Median and significant percentile range of time-series benchmark plot and comparison](images/pt-md-Fashion_%20Unisex%20Wear-tm.svg "Median and significant percentile range of time-series benchmark plot and comparison")
 *Median and significant percentile range of time-series benchmark plot and comparison*
 
 ![Energy density of market sectors in descending order](images/sv-mean.svg "Energy density of market sectors in descending order")
